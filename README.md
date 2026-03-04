@@ -13,16 +13,16 @@ O jogador deve descobrir uma palavra secreta tentando adivinhar por letras, com 
 
 
 ## Regras do Jogo:
-1- Quantas tentativas o jogador terá?
-R: 5, para o jogo não conter palavras complexas.
+1- Quantas tentativas o jogador terá?<br>
+R: 5, para o jogo não conter palavras complexas/longas.
 
-2- Como o jogo irá mostrar a palavra oculta?
+2- Como o jogo irá mostrar a palavra oculta?<br>
 R: Através das lacunas que estão visíveis no site.
 
-3- O que acontece quando o jogador acerta uma letra?
+3- O que acontece quando o jogador acerta uma letra?<br>
 R: A letra escolhida irá ser automaticamente direcionada à palavra oculta, assim revelando a posição da mesma e salva a letra para não se repetir.
 
-4- O que acontece quando o jogador erra uma letra?
+4- O que acontece quando o jogador erra uma letra?<br>
 R: A letra escolhida irá ser automaticamente direcionada à erros e salva a letra para não se repetir.
 
 5- O que acontece quando todas as letras são descobertas?
@@ -34,10 +34,10 @@ R: O jogador perde o jogo, a palavra oculta é descoberta e o input é bloqueado
 
 ## Variáveis:
 
-container = Serve para ser o título do jogo;
-palavraOculta = Serve para simular a palavra oculta com lacunas;
-formlista = Serve para suportar o botão e o input do mesmo;
-info-jogo = Serve para suportar as tentativas restantes, pontuação, letras erradas e erros com paragráfos;
+container = Serve para ser o título do jogo;<br>
+palavraOculta = Serve para simular a palavra oculta com lacunas;<br>
+formlista = Serve para suportar o botão e o input do mesmo;<br>
+info-jogo = Serve para suportar as tentativas restantes, pontuação, letras erradas e erros com paragráfos;<br>
 barra = Serve para suportar o progresso do jogo, mudando conforme acertos e erros.
 
 
@@ -49,3 +49,39 @@ barra = Serve para suportar o progresso do jogo, mudando conforme acertos e erro
 4) Se estiver correta → revela a posição em que a letra estará na palavra
 5) Se estiver errada → diminui tentativas e aumenta os erros, que no final é somado até chegar no limite de tentativas
 6) Verifica vitória ou derrota
+
+
+## Pseudocódigo:
+
+Iniciar jogo<br>
+Digitar palavra aleatória...<br>
+
+Definir tentativas: 5
+Definir pontuação: 0
+Definir erros: 0
+
+Enquanto tentativas > 0
+  Selecionar uma letra
+
+  Se letra estiver na palavra 
+    Revelar letra na posição correta
+  Senão
+    Diminur tentativas
+    Aumentar erros
+    Adicionar letra nas letras erradas
+  FimSe
+
+  Verificar vitória
+  Se palavra completa
+    mostrar "Você venceu!"
+    Aumentar pontuação
+    Parar o jogo
+  FimSe
+
+  Verificar derrota
+  Se tentativas = 0
+    Mostrar "Você perdeu"
+    Aumentar erros
+    Aumentar letras erradas
+    Parar o jogo
+  FimSe
