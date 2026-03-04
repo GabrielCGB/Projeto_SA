@@ -1,6 +1,6 @@
 # Projeto SA - Jogo Descubra a Palavra
 
-## Curso
+## Curso:
 Técnico de Desenvolvimento de Sistemas
 UC: Lógica de Programação
 
