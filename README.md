@@ -56,32 +56,32 @@ barra = Serve para suportar o progresso do jogo, mudando conforme acertos e erro
 Iniciar jogo<br>
 Digitar palavra aleatória...<br>
 
-Definir tentativas: 5
-Definir pontuação: 0
-Definir erros: 0
+Definir tentativas: 5<br>
+Definir pontuação: 0<br>
+Definir erros: 0<br>
 
-Enquanto tentativas > 0
-  Selecionar uma letra
+Enquanto tentativas > 0<br>
+  Selecionar uma letra<br>
 
-  Se letra estiver na palavra 
-    Revelar letra na posição correta
-  Senão
-    Diminur tentativas
-    Aumentar erros
-    Adicionar letra nas letras erradas
-  FimSe
+  Se letra estiver na palavra <br>
+    Revelar letra na posição correta<br>
+  Senão<br>
+    Diminur tentativas<br>
+    Aumentar erros<br>
+    Adicionar letra nas letras erradas<br>
+  FimSe<br>
 
-  Verificar vitória
-  Se palavra completa
-    mostrar "Você venceu!"
-    Aumentar pontuação
-    Parar o jogo
-  FimSe
+  Verificar vitória<br>
+  Se palavra completa<br>
+    mostrar "Você venceu!"<br>
+    Aumentar pontuação<br>
+    Parar o jogo<br>
+  FimSe<br>
 
-  Verificar derrota
-  Se tentativas = 0
-    Mostrar "Você perdeu"
-    Aumentar erros
-    Aumentar letras erradas
-    Parar o jogo
-  FimSe
+  Verificar derrota<br>
+  Se tentativas = 0<br>
+    Mostrar "Você perdeu"<br>
+    Aumentar erros<br>
+    Aumentar letras erradas<br>
+    Parar o jogo<br>
+  FimSe<br>
