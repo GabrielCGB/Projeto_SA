@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Palavra Secreta</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -13,31 +13,25 @@
     <main class="container">
         <h1>Palavra Secreta</h1>
 
+        <section id="secaotentativa">
+            <div class="palavra">_ _ _ _ _</div>
+        </section>
+        
     <form id="formlista">
         <input type="text" maxlength="1" placeholder="Letra">
         <button type="submit">Enviar</button>
-
     </form>
 
-    <section id="secaotentativa">
-        <div class="palavra">_ _ _ _ _</div>
-    </section>
-    
-    <section id="secao">
+    <section class="info-jogo">
         <p id="tentativas">Tentativas Restantes: 6</p>
-    </section>
-
-    <section id="secao2">
         <p id="pontuacao">Pontuação: 0</p>
-    </section>
-
-    <section id="secao3">
         <p id="letraserradas">Letras erradas: </p>
-    </section>
-
-    <section id="secao4">
         <p id="erros">erros: </p>
     </section>
+
+    <div class="barra">
+        <div class="progresso"></div>
+    </div>
 
     </main>
 </body>
