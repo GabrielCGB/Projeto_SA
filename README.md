@@ -78,6 +78,10 @@ Enquanto tentativas > 0<br>
     Parar o jogo<br>
   FimSe<br>
 
+  Se letra repetida estiver na palavra<br>
+    mostrar "Letra repetida, tente novamente"<br>
+  FimSe<br>
+
   Verificar derrota<br>
   Se tentativas = 0<br>
     Mostrar "Você perdeu"<br>
