@@ -10,29 +10,34 @@
 </head>
 <body>
 
-    <main class="container">
-        <h1>Palavra Secreta</h1>
+    <main class="container">                    <!--Esta variável serve para configurar o Título do jogo-->
+        <h1>🎮Palavra Secreta</h1> 
 
-        <section id="secaotentativa">
-            <div class="palavra">_ _ _ _ _</div>
+        <section>
+            <div class="palavraOculta">_ _ _ _ _</div>      <!--Esta variável serve para simular a palavra oculta-->
         </section>
         
-    <form id="formlista">
+    <form id="formlista">                   <!--Esta variável serve para classificar o botão e limitar a quantidade de letras-->
         <input type="text" maxlength="1" placeholder="Letra">
-        <button type="submit">Enviar</button>
+        <button id="btn-tentar">Enviar</button>
+        <br></br>
+        <button id="btn-reiniciar">Novo Jogo / Reiniciar</button>
     </form>
 
-    <section class="info-jogo">
-        <p id="tentativas">Tentativas Restantes: 5</p>
-        <p id="pontuacao">Pontuação: 0</p>
-        <p id="letraserradas">Letras erradas: </p>
-        <p id="erros">erros: </p>
+    <section class="info-jogo">                     <!--Esta variável serve para modificar as informações do jogo-->
+        <p id="tentativasRestantes">Tentativas Restantes: 5</p>     <!--Esta variável serve para mostrar as tentativas restantes do usuario-->
+        <p id="pontuacao">Pontuação: 0</p>                  <!--Esta variável serve para mostrar a pontuação do usuario-->
+        <p id="letrasUsadas">Pontuação: 0</p>
+        <p id="letrasErradas">Letras erradas: </p>          <!--Esta variável serve para mostrar a quantidade de letras erradas que o usuario coclocou-->
+        <p id="erros">erros: </p>                           <!--Esta variável serve para mostrar a quantidade de erros-->
     </section>
 
-    <div class="barra">
-        <div class="progresso"></div>
+    <div class="barra">                 <!--Esta variável serve para mostrar a barra de erros-->
+        <div class="progresso"></div>   <!--Esta variável serve para mostrar o progresso da barra de erros-->
     </div>
 
     </main>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
