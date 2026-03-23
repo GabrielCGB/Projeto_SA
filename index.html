@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Palavra Secreta</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <title>Palavra Secreta</title>
 </head>
+
 <body>
 
-    <main class="container">                    <!--Esta variável serve para configurar o Título do jogo-->
-        <h1>🎮Palavra Secreta</h1> 
+<main class="container">
+    <h1>🎮 Palavra Secreta</h1>
 
-        <section>
-            <div class="palavraOculta">_ _ _ _ _</div>      <!--Esta variável serve para simular a palavra oculta-->
-        </section>
-        
-    <form id="formlista">                   <!--Esta variável serve para classificar o botão e limitar a quantidade de letras-->
-        <input type="text" maxlength="1" placeholder="Letra">
-        <button id="btn-tentar">Enviar</button>
-        <br></br>
-        <button id="btn-reiniciar">Novo Jogo / Reiniciar</button>
-    </form>
-
-    <section class="info-jogo">                     <!--Esta variável serve para modificar as informações do jogo-->
-        <p id="tentativasRestantes">Tentativas Restantes: 5</p>     <!--Esta variável serve para mostrar as tentativas restantes do usuario-->
-        <p id="pontuacao">Pontuação: 0</p>                  <!--Esta variável serve para mostrar a pontuação do usuario-->
-        <p id="letrasUsadas">Pontuação: 0</p>
-        <p id="letrasErradas">Letras erradas: </p>          <!--Esta variável serve para mostrar a quantidade de letras erradas que o usuario coclocou-->
-        <p id="erros">erros: </p>                           <!--Esta variável serve para mostrar a quantidade de erros-->
+    <!-- Palavra -->
+    <section>
+        <div id="palavraOculta"></div>
     </section>
 
-    <div class="barra">                 <!--Esta variável serve para mostrar a barra de erros-->
-        <div class="progresso"></div>   <!--Esta variável serve para mostrar o progresso da barra de erros-->
-    </div>
+    <!-- Entrada -->
+    <form id="formlista">
+        <input id="inputLetra" type="text" maxlength="1" placeholder="Letra">
+        <button id="btn-tentar">Enviar</button>
+        <br><br>
+        <button type="button" id="btn-reiniciar">Novo Jogo</button>
+    </form>
 
-    </main>
+    <!-- Info -->
+    <section class="info-jogo">
+        <p id="tentativasRestantes">Tentativas: 6</p>
+        <p id="pontuacao">Pontuação: 0</p>
+        <p id="letrasErradas">Letras erradas: </p>
+    </section>
 
-    <script src="assets/js/script.js"></script>
+</main>
+
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
