@@ -1,52 +1,97 @@
 const listaPalavras = ["CARRO", "QUEDA", "SUBIR", "BOLHA", "TERMO", "MOUSE", "CABOS", "ROUPA", "PORCO", "ERROS"]
 
-let palavraSecreta = []
-let tentativasRestantes = []
-let palavraDisplay = []
+let palavraSecreta = ""
+let tentativasRestantes = 6
+let letrasTentadas = []
 let letrasCorretas = []
 let letrasDisplay = []
-let letrasAdivinhadas = []
 let pontuacao = 0
 
 
-const letrasDisplay = document.getElementById("palavraOculta")
-const tentativasRestantes = document.getElementById("tentativasRestantes")
-const pontuacao = document.getElementById("pontuacao")
+const displayPalavra = document.getElementById("palavraOculta")
+const displayTentativas = document.getElementById("tentativasRestantes")
+const displayPontuacao = document.getElementById("pontuacao")
+const btnReiniciar = document.getElementById("btn-reiniciar")
 
 
 
 function iniciarJogo(){
-    const posicaoSorteadaDaListaDePalavras = math.floor(math.random() * listaPalavras.length)
+    const posicaoSorteadaDaListaDePalavras = Math.floor(Math.random() * listaPalavras.length)
 
-    palavraSecreta = listaPalavras(posicaoSorteadaDaListaDePalavras).toUpperCase()
+    palavraSecreta = listaPalavras[posicaoSorteadaDaListaDePalavras].toUpperCase()
 
-    palavraDisplay = array(palavraSecreta.length).fill("_")
+    palavraExibida = array(palavraSecreta.length).fill("_")
 
     tentativasRestantes = 6
+    letrasTentadas = []
     letrasCorretas = []
-    letrasAdivinhadas = []
 
-    reiniciarPalavra()
+    renderizarPalavra()
 }
 
 
 
-function reiniciarPalavra(){
+function renderizarPalavra(){
 
-    palavraDisplay.innerHTML = ""
+    reiniciarPalavra.innerHTML = ""
 
-    letrasDisplay.forEach(letra )[
+    palavraExibida.forEach(letra => {
+        const span = document.createElement("span");
+        span.innerText = letra;
+        reiniciarPalavra.appendChild(span);
+    });
+    displayTentativas.textContent = tentativasRestantes;
+    displayPontuacao.textContent = pontuacao(" ");
+}
+btnReiniciar.addEventListener("click", iniciarJogo);
 
-    const span = document.createElement("span")
+function enviarLetra(){
+    const letras = inpu.value.toUpperCase()
 
-    span.innerHTML = letra
+    input.value = ""
 
-    palavraDisplay.appendchild(span)
-}{
+    if(letras === "" || !/[A-Z]/.test(letras)){
+        return
+    }
+    if(letrasUsadas.includes(letras)){
+        alert("Você já usou essa letra!")
+        return
+    }
+       
+    letrasUsadas.push(letras)
+    
+    if(palavraSecreta.includes(letras)){
 
-    displayTentativas.innerHTML = tentativasRestantes
-    displayPontuacao.innerHTML = pontuacao
+        for(let i = 0; i < palavraSecreta.length; i++){
+
+            if(palavraSecreta[i] === letras){
+                palavraOculta[i] = letras
+            }
+
+        }
+
+    }else{
+
+        tentativasRestantes--
+
+    }
+
+    renderizarPalavra()
+    verificarFimDoJogo()
 }
 
+    function verificarFimDoJogo(){
+        if(palavraSecreta.includes("_")){
+            alert("Você venceu!")
+            input.disable = true
+            btnReiniciar = true
+        }
 
+        if(tentativasRestantes === 0){
+            alert("Você perdeu! A palavra era: " + palavraOculta)
+            input.disabled = true
+            botaoTentar.disabled = true
+        }
+    }
 
+iniciarJogo();
