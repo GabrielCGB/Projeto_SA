@@ -6,6 +6,7 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
+    margin:0;
 }
 
 .container{
@@ -26,11 +27,17 @@ h1{
     margin-bottom:20px;
 }
 
-.palavraOculta{
+#palavraOculta{
     font-size:32px;
     letter-spacing:10px;
     color:#ff4dd2;
     margin:20px 0;
+}
+
+/* letras individuais */
+#palavraOculta span{
+    display:inline-block;
+    min-width:20px;
 }
 
 input{
@@ -41,33 +48,33 @@ input{
     color:white;
     text-align:center;
     outline:none;
+    font-size:18px;
+    width:60px;
 }
 
 input:focus{
-    padding: 2px 1px
+    padding:12px;
+    box-shadow:0 0 10px #00ffe1;
 }
 
 #btn-tentar {
     padding: 10px 20px;
-    cursor: pointer;
     transition: 0.3s;
     background:linear-gradient(45deg, blue, red);
     border:none;
     border-radius:8px;
     color:white;
-    cursor:pointer;
-    
+    margin-left:10px;
 }
 
 #btn-reiniciar{
     padding: 10px 20px;
-    cursor: pointer;
     transition: 0.3s;
     background:linear-gradient(45deg, black, white);
     border:none;
     border-radius:8px;
     color:white;
-    cursor:pointer;
+    margin-top:10px;
 }
 
 button:hover{
@@ -75,21 +82,20 @@ button:hover{
     box-shadow:0 0 10px #ff00cc;
 }
 
+.info-jogo{
+    margin-top:20px;
+}
 
 #tentativasRestantes{
-    color: #00ff88;
+    color:#00ff88;
 }
 
 #pontuacao{
     color:#ffd000;
 }
 
-#erros{
-    color:#ff4d4d;
-}
-
-#letraserradas{
-    color: orange
+#letrasErradas{
+    color:orange;
 }
 
 .barra{
