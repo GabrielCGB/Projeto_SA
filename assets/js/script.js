@@ -1,17 +1,22 @@
+// Banco de dados
 const listaPalavras = ["CARRO", "QUEDA", "SUBIR", "BOLHA", "TERMO", "MOUSE", "CABOS", "ROUPA", "PORCO", "ERROS"]
 
+// Variáveis de estado
 let palavraSecreta = ""
 let tentativasRestantes = 6
 let letrasTentadas = []
 let palavraExibida = []
 let pontuacao = 0
 
+// Seleção de elementos do DOM
 const displayPalavra = document.getElementById("palavraOculta")
 const displayTentativas = document.getElementById("tentativasRestantes")
 const displayPontuacao = document.getElementById("pontuacao")
 const btnReiniciar = document.getElementById("btn-reiniciar")
 const input = document.querySelector("input")
 
+
+// Função: iniciarJogo(): Responsável por sortear a palavra e resetar o tabuleiro
 function iniciarJogo(){
     const posicao = Math.floor(Math.random() * listaPalavras.length)
     palavraSecreta = listaPalavras[posicao]
@@ -24,6 +29,7 @@ function iniciarJogo(){
     renderizarPalavra()
 }
 
+// Função: renderizarPalavra(): Responsável por "pintar" o estado do jogo no navegador.
 function renderizarPalavra(){
     displayPalavra.innerHTML = ""
 
@@ -44,13 +50,14 @@ function enviarLetra(){
     if(letra === "" || !/[A-Z]/.test(letra)) 
     return
 
+    // verifica se a letra ja foi tentada
     if(letrasTentadas.includes(letra)){
         alert("Você já usou essa letra!")
         return
     }
 
     letrasTentadas.push(letra)
-
+    
     if(palavraSecreta.includes(letra)){
         for(let i = 0; i < palavraSecreta.length; i++){
             if(palavraSecreta[i] === letra){
